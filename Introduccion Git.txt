@@ -1,0 +1,62 @@
+Sistema de control de versiones.
+
+En el proceso de desarrollo de software se debe mantener registro de cambios que se realizan en el codigo fuente a lo largo del tiempo. 
+
+VERSION: Estado en el que se encuentra el proyecto en un momento dado de su desarrollo o modificacion. Estos sistemas de control de versiones utilizan repositorios para almacenar el proyecto actualizado junto a sus cambios historicos. Los sistemas de control de versiones centralizados almacenan todo el codigo en un unico repositorio. Si el server no esta disponible nadie podra colaborar o guardar cambios en archivos en los que hayan  estado trabajando.
+
+----
+
+Los sistemas de control de versiones distribuidos permiten continuar le trabajo aún cuando el repostorio de referencia n oesta disponible. Los clientes pueden cargar la ultima copia del codigo y todos los cambios historicos. Si un servidor deja de funcionar y estos sistemas estaban colaborando a traves de él, cualquiera del os repositorios disponibles en los clientes puede ser copiado al servidor con el fin de restaurarlo.
+
+VENTAJAS: El historial de cambios permite saber autor, fecha y notas escritas de cambios realizados y volver a versiones anteriores para solucionar errores o analizar causas, y para solucionar problemas de versiones anteriores.
+
+Permite crear y fusionar ramas, o sea, cuando hay varios trabajando de manera independiente se puede fusionar todo en una rama principal, los sistemas de control de versiones tienen mecanismo par aidentificar que los cambios entre ramas no entren en conflicto para asegurar funcionalidad y integración
+
+Trazabailidad de cambios que se hacen en el software: Els isteam de control de version con un software de gestion dfe proy4ectos y seguimiento de errores ayuda con el analisis de la causa raiz de los problemas y con la recopilacion de información.
+
+
+
+GIT - Proyecto de codigo abierto y maduro con un activo mantenimiento. Desarrollado por Linus Torvalds
+Es un sistema de control de versiones distribuido que funciona en cualquier plataforma e integrado en una amplia variedad de entornos de desarrollos. 
+Con GIT cada desarrollador posee una copia del trabajo en un repositorio local, donde puede albergar el historial completo de todos los cambios y mediante determinados comandos se realiza sincronizaciones al repositorio remoto.
+
+CARACTERISTICAS:
+
+Rendimientos: Algoritmos en GIT aprovechan profundo conocimiento sobre atributos comunes de los auntenticos arboles de archivos de codigo fuente, como se modifican con el tiempo y sus patrones de acceso. El formato de objeto de los archivos del repositorio de Git emplea una combinacion de codificacion delta (almacena las diferencias de contenido) y comprensión, y guarda explicitamente contenido de los directorios y objetos de metadatos de las versiones.
+
+Seguridad: Conserva integridad del codigo fuente gestionado. El contenido de los archivos y las verdaderas relaciones entre estos, y los directorios, las versiones, etiquetas y las confirmaciones estan protegidos con un algoritmo de hash llamado "SHA!". Se salvaguarda el codigo y historial de cambios frente a modificaciones accidentales y maliciosas y garantiza que el historial sea totalmente trazable.
+
+Flexibilidad: Permite varios tipos de flujos de trabajo de desarrollo no lineal, permite eficiencia en proyectos grandes, pequeños y compatibilidad con numerosos sistemas y protocolo. Se ideo para posibilitar ramificación y el etiquetado como procesos de primera importancia y las operaciones que afectan a las ramas y a la etiquetas también se almacenan en el historial de cambios.
+
+
+AREAS Y ESTADOS:
+
+CONCEPTOS Y ETAPAS:
+
+Git es proyecto de codigo abierto maduro y con un activo mantenimiento.
+
+GIT WORKING DIRECTORY: Es una copia de una version del proyecto. Archivos sacados de base de datos comprimida y se colocan en el disco para ser usados o modificados.
+
+STAGING AREA: Archivo que se encuentra dentro del directorio de GIT y que contiene información acerca de lo que va a ir en la proxima confirmación.
+
+LOCAL REPOSITORY: Se almacenan los metadatos y la base de datos de objetos del proytecto. Es lo que se copia cuando se clona un repositorio desde otra fuente.
+
+REMOTE REPOSITORY: Repositorio que se encuentra en u nesrvidor remoto y con los que eventualmente se sincronizan los trabajos entre los diferentes integrantes del equipo
+
+
+
+COMANDOS:
+
+git init : Inicializa un directorio como repositorio Git, se ejecuta dentro del directorio del proyecto, y crea un subdirectorio .git que contiene todos los archivos para realizar el seguimiento de los cambios, etiquetas, etc.
+
+git add <file>: Luego de crear, modificar o eliminar un archivo, los cambios quedan en el area de trabajo, por lo que se debe pasar al area de preparacion mediante el uso de comando git add para que se incluya dentro de la siguiente confirmacion/commit
+
+git status: Permite conocer estado de los archivos
+
+git commit: Se usa para confirmar todos los cambios registrados en el area de preparacion / se pasan los cambios al repositorio local
+
+git push: Se utiliza para enviar confirmaciones registradas en el repositorio local a un repositorio remoto.
+
+git pull: Trae los cambios al repositorio local pero los deja disponibles para su modificacion o revision en el area de trabajo. Se utiliza cuando ya se tiene un repostiroio local vinculado a uno remoto.
+
+git clone: Genera un directorio que contiene todo lo propio al proyecto, y el subdirectorio .git necesario para gestionar los cambios y todo lo pertinente al repositorio git.
